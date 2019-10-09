@@ -2,7 +2,7 @@ const windowSize = require('window-size');
 
 function getWindowSize() {
   const defaultSize = { width: 80, height: 300 };
-  let currentSize = windowSize.get();
+  const currentSize = windowSize.get();
 
   if (!currentSize) {
     return defaultSize;
