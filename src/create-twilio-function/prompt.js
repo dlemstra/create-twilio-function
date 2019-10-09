@@ -9,7 +9,7 @@ function validateAccountSid(input) {
   }
 }
 
-async function promptForAccountDetails(config) {
+function promptForAccountDetails(config) {
   if (config.skipCredentials) return {};
   const questions = [];
   if (typeof config.accountSid === 'undefined') {
@@ -30,7 +30,7 @@ async function promptForAccountDetails(config) {
   return inquirer.prompt(questions);
 }
 
-async function promptForProjectName(errors) {
+function promptForProjectName(errors) {
   const questions = [
     {
       type: 'input',
